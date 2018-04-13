@@ -156,9 +156,9 @@ $(document).ready(function() {
 
             if (eventObject.which == 27) {
 
-                if ( popupBlock.is(":visible") ) {
+                if ( $(".popup_wrapp").is(":visible") ) {
 
-                    popupBlock.fadeOut(300);
+                    $(".popup_wrapp").fadeOut(300);
 
                 }
 
