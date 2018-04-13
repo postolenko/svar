@@ -775,10 +775,6 @@ textarea:focus {
     z-index: 10;
 }
 
-.header-site.fixed {
-    position: fixed;
-}
-
 .header-row {
 
 }
@@ -1050,6 +1046,162 @@ textarea:focus {
     color: #7ab800;
 }
 
+/*-- Fixed Menu --*/
+
+.fixed-menu {
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 12;
+    background-color: #616365;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.fixed-menu.visible {
+    top: 0;
+}
+
+.fixed-menu .left {
+    width: 80%;
+    padding: 0 1% 0 0;
+}
+
+.fixed-menu .right {
+    width: 20%;
+    text-align: right;
+    padding: 22px 0 0 1%;
+}
+
+.main-nav_2 {
+    margin-left: -15px;
+}
+
+.main-nav_2 li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    text-align: center;
+}
+
+.main-nav_2 li a {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    white-space: nowrap;
+    padding: 23px 0 29px 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.main-nav_2 li a:link,
+.main-nav_2 li a:visited {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.main-nav_2 li a:active,
+.main-nav_2 li a.active {
+    color: #7ab800;
+    font-weight: normal;
+}
+
+.main-nav_2 li a:hover {
+    color: #7ab800;
+    font-weight: normal;
+}
+
+.main-nav_2 li a:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #7ab900;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.main-nav_2 li a:link:after,
+.main-nav_2 li a:visited:after {
+    opacity: 0;
+}
+
+.main-nav_2 li a:active:after,
+.main-nav_2 li a.active:after {
+    opacity: 1;
+}
+
+.main-nav_2 li a:hover:after {
+    opacity: 1;
+}
+
+.green-link {
+    border-bottom: 1px solid #c1ddab;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: normal;
+    color: #c1ddab;
+}
+
+.green-link:link,
+.green-link:visited {
+    border-bottom: 1px solid #c1ddab;
+    color: #c1ddab;
+}
+
+.green-link:active,
+.green-link.active {
+    border-bottom: 1px solid transparent;
+    color: #ffffff;
+}
+
+.green-link:hover {
+    border-bottom: 1px solid transparent;
+    color: #ffffff;
+}
+
+/*-- /Fixed Menu --*/
+
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
 /*-------------------------------------------*/
@@ -1058,6 +1210,7 @@ textarea:focus {
 
 .promo {
     min-height: 100vh;
+    padding: 0;
     background-image: url(img/promo_bg.jpg);
     background-size: cover;
     background-position: center;
@@ -1215,8 +1368,14 @@ textarea:focus {
 
 /*-- Section 2 --*/
 
+/*<li><a href="#menu-1">Наклонные вытяжки</a></li>
+<li><a href="#menu-2">Духовые шкафы</a></li>
+<li><a href="#menu-3">Варочные панели</a></li>
+<li><a href="#menu-4">Индукционные панели</a></li>
+<li><a href="#menu-5">Ретро-комплекты</a></li>*/
+
 .sect-2 {
-    padding: 0 0 10px 0;
+    padding: 0 0 19px 0;
 }
 
 .cream-bg {
@@ -1275,7 +1434,7 @@ h2 .svar {
 .circle-product-box {
     max-width: 1260px;
     height: 968px;
-    margin: 116px auto 19px auto;
+    margin: 116px auto 0 auto;
     position: relative;
     background-image: url(img/circles.png);
     background-size: contain;
@@ -1573,6 +1732,10 @@ h2 .svar {
 
 /*-- Section 3 --*/
 
+.sect-3 {
+    padding: 0;
+}
+
 .green-bg {
     background-color: #7ab800;
 }
@@ -1591,10 +1754,6 @@ h2 .svar {
 h2.svar.black {
     color: #111c24;
 }
-
-/*-- /Section 3 --*/
-
-/*-- Section 4 --*/
 
 .shape-bg {
     background-image: url(img/shape_bg.jpg);
@@ -1622,14 +1781,12 @@ h2.svar.black {
 }
 
 .articles_2 .article_2_wrapp:last-child {
-    margin-bottom: 0;
-    padding-bottom: 30px;
+    padding-bottom: 36px;
 }
 
 .articles_2 .article_2_wrapp:last-child:after {
     display: none;
 }
-
 
 .article_2 {
     margin: 55px 0 0 0;
@@ -1730,10 +1887,6 @@ h2.svar.black {
     display: inline-block;
     vertical-align: top;
     margin: 7px 11px;
-}
-
-.nav_1 li a {
-
 }
 
 .nav_1 li a i {
@@ -1840,17 +1993,9 @@ h2.svar.black {
     top: 7px;
 }
 
-/*.articles_2 .article_2_wrapp:last-child() {
-    margin-bottom: 0;
-}
+/*-- /Section 3 --*/
 
-.articles_2 .article_2_wrapp:last-child():after {
-    display: none;
-}*/
-
-/*-- /Section 4 --*/
-
-/*-- Section 5 --*/
+/*-- Section 4 --*/
 
 .callbak-sect {
     padding: 0 0 61px 0;
@@ -1946,9 +2091,9 @@ h2.svar.black {
     float: right;
 }
 
-/*-- /Section 5 --*/
+/*-- /Section 4 --*/
 
-/*-- Section 6 --*/
+/*-- Section 5 --*/
 
 .article_3 {
     margin: 21px 0;
@@ -1970,10 +2115,6 @@ h2.svar.black {
     width: auto;
     height: auto;
     max-width: 100%;
-}
-
-.article_3 p {
-
 }
 
 .thumbnails_1 {
@@ -2042,17 +2183,13 @@ h2.svar.black {
     border-radius: 50%;
 }
 
-.info-box p {
-
-}
-
 .medium {
     font-weight: 500;
 }
 
-/*-- /Section 6 --*/
+/*-- /Section 5 --*/
 
-/*-- Section 7 --*/
+/*-- Section 6 --*/
 
 .shape-sect {
     border-top: 1px solid #dbdcdd;
@@ -2138,11 +2275,11 @@ h2.svar.black {
     color: #111c24;
 }
 
-/*-- /Section 7 --*/
+/*-- /Section 6 --*/
 
-/*-- Section 8 --*/
+/*-- Section 7 --*/
 
-.sect-8 {
+.sect-7 {
     padding: 0;
     min-height: 100vh;
     background-image: url(img/bg_3.jpg);
@@ -2150,11 +2287,11 @@ h2.svar.black {
     background-position: center;
 }
 
-.sect-8 .row {
+.sect-7 .row {
     height: 1px;
 }
 
-.sect-8 .row .leftCoord {
+.sect-7 .row .leftCoord {
     width: 72%;
     height: 3px;
 }
@@ -2189,9 +2326,9 @@ h2.svar.black {
     font-weight: normal;
 }
 
-/*-- /Section 8 --*/
+/*-- /Section 7 --*/
 
-/*-- Section 9 --*/
+/*-- Section 8 --*/
 
 .testimonials-slider_wrapp {
     margin: 50px 0 37px 0;
@@ -2380,11 +2517,11 @@ h2.svar.black {
     background: #7ab800;
 }
 
-/*-- /Section 9 --*/
+/*-- /Section 8 --*/
 
-/*-- Section 10 --*/
+/*-- Section 9 --*/
 
-.sect-10 {
+.sect-9 {
     padding: 73px 0 49px 0;
     background-image: url(img/circles.png);
     background-position: 132% -65px;
@@ -2403,10 +2540,6 @@ h2.svar.black {
 .two-cols .right {
     width: 48%;
     padding: 20px 0 20px 2%;
-}
-
-.accordeon {
-
 }
 
 .accordeon-item {
@@ -2718,11 +2851,11 @@ h2.svar.black {
     border-bottom: 1px solid transparent;
 }
 
-/*-- /Section 10 --*/
+/*-- /Section 9 --*/
 
-/*-- Section 11 --*/
+/*-- Section 10 --*/
 
-.section-11 {
+.section-10 {
     padding-top: 73px;
 }
 
@@ -2846,9 +2979,9 @@ h2.svar.black {
     width: 33.33%;
 }
 
-/*-- /Section 11 --*/
+/*-- /Section 10 --*/
 
-/*-- Section 12 --*/
+/*-- Section 11 --*/
 
 .contacts-sect {
     padding: 0;
@@ -2861,10 +2994,6 @@ h2.svar.black {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.contacts-sect .row {
-
 }
 
 .contacts_wrapp {
@@ -2973,7 +3102,7 @@ h2.svar.black {
     color: #ffffff;
 }
 
-/*-- /Section 12 --*/
+/*-- /Section 11 --*/
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
@@ -3176,3 +3305,192 @@ h2.svar.black {
 .reforge:hover:after {
     opacity: 1;
 }
+
+
+/*-- Popups --*/
+
+.popup_wrapp {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+    z-index: 13;
+}
+
+.close-popup {
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 12;
+    background-image: url(img/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid transparent;
+}
+
+.popup-form {
+    position: relative;
+    padding: 47px 3%;
+}
+
+.popup-form .close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.popup {
+    display: block;
+    max-width: 500px;
+    margin: 90px auto 20px auto;
+}
+
+/*-- /Popups --*/
+
+/*-- Animation --*/
+
+.leftSlice {
+    position: relative;
+    left: -3%;
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .4s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .4s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .4s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-delay: .4s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .leftSlice {
+    left: 0;
+    opacity: 1;
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .4s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .4s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .4s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    --transition-delay: .4s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .fadeIn {
+    opacity: 1;
+}
+
+.zoomFade {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .4s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .4s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .4s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    --transition-delay: .4s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .zoomFade {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+.fadeInUp {
+    position: relative;
+    bottom: -20px;
+    opacity: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: .4s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-delay: .4s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: 1s;
+    -ms-transition-delay: .4s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-delay: .4s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+section.active .fadeInUp {
+    bottom: 0;
+    opacity: 1;
+}
+
+/*-- /Animation --*/
