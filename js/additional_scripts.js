@@ -2,6 +2,14 @@ $(window).on("load",function(){
 
 	$(".scroll").mCustomScrollbar();
 
+    getScrollBar();
+
+});
+
+$(window).resize(function() {
+
+    getScrollBar();
+
 });
 
 $(document).ready(function() {		
@@ -29,4 +37,32 @@ $(document).ready(function() {
     });
 
 });
+
+function getScrollBar() {
+
+    if(bodyWidth >= 768 ) {
+
+        if($(".main-nav").hasClass("mCustomScrollbar")) {
+            $(".main-nav").mCustomScrollbar("destroy");
+        }
+
+    } else {
+
+        $(".main-nav").mCustomScrollbar();
+
+    }
+
+    if(bodyWidth >= 1024 ) {
+        
+        if($(".main-nav_2").hasClass("mCustomScrollbar")) {
+            $(".main-nav_2").mCustomScrollbar("destroy");
+        }
+
+    } else {
+
+        $(".main-nav_2").mCustomScrollbar();
+
+    }
+
+}
 

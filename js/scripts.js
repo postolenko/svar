@@ -190,6 +190,72 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".respbtn_1").click(function() {
+
+            if( $(".main-nav_wrapp").is(":hidden") ) {
+
+                $(".main-nav_wrapp").fadeIn(300);
+
+                $(this).addClass("active");
+
+            } else {
+
+                $(".main-nav_wrapp").fadeOut(300);
+
+                $(this).removeClass("active");
+
+            }
+
+        });
+
+        $(this).keydown(function(eventObject){
+
+            if (eventObject.which == 27 &&
+                $(".main-nav_wrapp").is(":visible") ) {
+
+                    $(".main-nav_wrapp").fadeOut(300);
+
+                    $(".respbtn_1").removeClass("active");
+
+            }
+
+        });
+
+        $(".respbtn_2").click(function() {
+
+            if( $(".main-nav_wrapp_2").is(":hidden") ) {
+
+                $(".main-nav_wrapp_2").fadeIn(300);
+
+                $(this).addClass("active");
+
+            } else {
+
+                $(".main-nav_wrapp_2").fadeOut(300);
+
+                $(this).removeClass("active");
+
+            }
+
+        });
+
+        $(this).keydown(function(eventObject){
+
+            if (eventObject.which == 27 &&
+                $(".main-nav_wrapp_2").is(":visible") ) {
+
+                    $(".main-nav_wrapp_2").fadeOut(300);
+
+                    $(".respbtn_2").removeClass("active");
+
+            }
+
+        });
+
+    });
+
 });
 
 function getPromoPaddingTop() {
@@ -272,7 +338,7 @@ function scrollNav() {
 
         var elemCoord = $(linkHref);
 
-        var topElemCoord = elemCoord.offset().top;
+        var topElemCoord = elemCoord.offset().top - $(".main-nav_2").height();
         var bottomElemCoord = topElemCoord + elemCoord.height();
 
         if( navCoord > topElemCoord && navCoord < bottomElemCoord ) {
@@ -281,9 +347,7 @@ function scrollNav() {
             $(this).addClass("active");
 
         } else {
-
             $(this).removeClass("active");
-
         }
 
     });
@@ -292,16 +356,31 @@ function scrollNav() {
 
 function getNavItemsSize() {
 
-    $(".main-nav_2").find("a").each(function() {
+    if( bodyWidth > 1024 ) {
 
-        paddingNavItem = 15;
-        itemNav = $(this).closest("li");
+        $(".main-nav_2").find("a").each(function() {       
 
-        itemNav.css({
-            "width" : $(this).width() + paddingNavItem*2 + "px"
+            if( bodyWidth <= 1240 ) {
+                paddingNavItem = 6;
+            } else {
+                 paddingNavItem = 15;
+            }
+
+            itemNav = $(this).closest("li");
+
+            itemNav.css({
+                "width" : $(this).width() + paddingNavItem*2 + "px"
+            });
+
         });
 
-    });
+    } else {
+
+        $(".main-nav_2 li").css({
+            "width" : 100 + "%"
+        });
+
+    }
 
 }
 
