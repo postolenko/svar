@@ -287,10 +287,6 @@ h3 {
     color: #282922;
 }
 
-h4 {
-
-}
-
 p {
     font-family: "Lato", "Arial", "Verdana", sans-serif;
     font-size: 16px;
@@ -396,8 +392,8 @@ input:focus {
 
 textarea {
     width: 100%;
-    height: 64px;
-    padding: 0 30px;
+    height: 150px;
+    padding: 17px 30px;
     border: 1px solid rgb(214, 215, 216);
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -405,7 +401,7 @@ textarea {
     background: rgba(0, 0, 0, .25);
     font-family: "Lato", "Arial", "Verdana", sans-serif;
     font-size: 20px;
-    line-height: 63px;
+    line-height: 28px;
     font-weight: 300;
     color: #d6d7d8;
 }
@@ -1362,10 +1358,6 @@ textarea:focus {
     margin-bottom: 20px;
 }
 
-.article_1 {
-
-}
-
 .article_1 .left {
     width: 61%;
 }
@@ -2229,7 +2221,6 @@ h2.svar.black {
 .thumb-1 {
     display: inline-block;
     vertical-align: top;
-    /*width: 33.33%;*/
     max-width: 204px;
     padding: 10px 20px;
 }
@@ -2857,12 +2848,14 @@ h2.svar.black {
     padding: 0 9%;
 }
 
-.form-2 input {
+.form-2 input,
+.form-2 textarea {
     background: #f1f8ec;
     color: #97989b;
 }
 
-.form-2 input:focus {
+.form-2 input:focus,
+.form-2 textarea:focus {
     border: 1px solid rgb(214, 215, 216);
     background: #ffffff;
     color: #616365;
@@ -2872,6 +2865,10 @@ h2.svar.black {
 .form-2 input::-moz-placeholder          {color: #97989b;}
 .form-2 input:-moz-placeholder           {color: #97989b;}
 .form-2 input:-ms-input-placeholder      {color: #97989b;}
+.form-2 textarea::-webkit-input-placeholder {color: #97989b;}
+.form-2 textarea::-moz-placeholder          {color: #97989b;}
+.form-2 textarea:-moz-placeholder           {color: #97989b;}
+.form-2 textarea:-ms-input-placeholder      {color: #97989b;}
 
 .checkbox_wrapp {
     position: relative;
@@ -2972,7 +2969,6 @@ h2.svar.black {
 .thumb-3 {
     display: inline-block;
     vertical-align: top;
-    /*width: 33.33%;*/
     width: 25%;
     padding: 15px;
 }
@@ -3411,7 +3407,6 @@ h2.svar.black {
 .reforge:hover:after {
     opacity: 1;
 }
-
 
 /*-- Popups --*/
 
