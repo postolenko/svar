@@ -27,6 +27,10 @@ var itemNav;
 // ---------------
 
 var navCoord;
+var linkHref;
+var elemCoord;
+var topElemCoord;
+var bottomElemCoord;
 
 // ---------------
 
@@ -361,12 +365,12 @@ function scrollNav() {
 
     $(".main-nav_2 a").each(function() {
 
-        var linkHref = $(this).attr("href");
+        linkHref = $(this).attr("href");
 
-        var elemCoord = $(linkHref);
+        elemCoord = $(linkHref);
 
-        var topElemCoord = elemCoord.offset().top;
-        var bottomElemCoord = topElemCoord + elemCoord.height();
+        topElemCoord = elemCoord.offset().top;
+        bottomElemCoord = topElemCoord + elemCoord.height();
 
         if( navCoord > topElemCoord && navCoord < bottomElemCoord ) {
 
