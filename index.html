@@ -13,14 +13,13 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
-	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-	<script type="text/javascript" src="slick/slick.js"></script>
-	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
+	<script src="vendors/js/jquery.js"></script>
+	<script src="slick/slick.js"></script>
+	<script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/js/smoothscroll.js"></script>
+	<script src="vendors/js/jquery.fancybox.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 	<title>SVAR - Российская бытовая техника</title>
 </head>
 
@@ -99,18 +98,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="header-row row-2" id="fixed">
+			<div class="header-row row-2">
 				<div class="row clearfix">
 					<div class="left">
-						<div class="oveflow_wrapp main-nav_wrapp">
-							<ul class="main-nav">
-								<li><a href="#" class="active">О производителе</a></li>
-								<li><a href="#">О бренде</a></li>
-								<li><a href="#">Где купить</a></li>
+						<div class="oveflow_wrapp main-nav_wrapp naigation" data-nav="nav_1">
+							<ul class="main-nav main_nav">
+								<li><a href="#about" class="active">О производителе</a></li>
+								<li><a href="#brand">О бренде</a></li>
+								<li><a href="#shopping">Где купить</a></li>
 							</ul>
 						</div>
 
-						<button class="respmenubtn respbtn_1">	
+						<button class="respmenubtn respbtn_1" data-nav-btn = "nav_1">	
 							<span></span>
 							<span></span>
 							<span></span>
@@ -133,8 +132,8 @@
 		<div class="fixed-menu" id="fixed">
 			<div class="row clearfix">
 				<div class="left">
-					<div class="oveflow_wrapp main-nav_wrapp_2">
-						<ul class="main-nav_2 offset-ziro">
+					<div class="oveflow_wrapp main-nav_wrapp_2 naigation" data-nav = "nav_2">
+						<ul class="main-nav_2 main_nav offset-ziro">
 							<li><a href="#menu-1">Наклонные вытяжки</a></li>
 							<li><a href="#menu-2">Духовые шкафы</a></li>
 							<li><a href="#menu-3">Варочные панели</a></li>
@@ -142,7 +141,7 @@
 							<li><a href="#menu-5">Ретро-комплекты</a></li>
 						</ul>
 					</div>
-					<button class="respmenubtn respbtn_2">	
+					<button class="respmenubtn respbtn_2" data-nav-btn = "nav_2">	
 						<span></span>
 						<span></span>
 						<span></span>
@@ -222,7 +221,7 @@
 
 				<!-- Section 2 -->
 
-				<section class="sect-2 cream-bg">
+				<section class="sect-2 cream-bg" id="brand">
 
 					<div class="h-shape">
 						<div class="row">
@@ -234,7 +233,7 @@
 
 					<div class="row">
 
-						<div class="circle-product-box">
+						<div class="circle-product-box animate">
 							<div class="characteristic ch_1">
 								<div class="icon-box">
 									<i class="icon_01"></i>
@@ -278,7 +277,7 @@
 								<p>Техника SVAR имеет все необходимые функции для Вашей комфортной и быстрой работы на кухне</p>
 							</div>
 
-							<img class="img-center" src="img/3.png" alt="" />
+							<img class="img-center zoomFade" src="img/3.png" alt="" />
 
 						</div>
 
@@ -292,7 +291,7 @@
 
 				<section class="sect-3 shape-bg">
 
-					<div class="green-bg"">
+					<div class="green-bg">
 						<div class="row">
 							<div class="h-black">
 								<h2>Каталог бытовой техники</h2>
@@ -305,14 +304,14 @@
 
 						<div class="articles_2">
 
-							<div class="article_2_wrapp" id="menu-2">
+							<div class="article_2_wrapp animate" id="menu-2">
 								<h3>Духовые шкафы</h3>
 								<div class="article_2 clearfix">
 									<div class="left">
 										<img src="img/5.png" alt="" />
 									</div>
 									<div class="right">
-										<div class="descript">
+										<div class="descript leftSlice">
 											<div class="descript-title">
 												<h3>Духовой шкаф с сенсорным программатором черный</h3>
 												<i class="icon-07"></i>
@@ -349,14 +348,14 @@
 								</div>
 							</div>
 
-							<div class="article_2_wrapp" id="menu-5">
+							<div class="article_2_wrapp animate" id="menu-5">
 								<h3>Ретро-комплекты</h3>
 								<div class="article_2 clearfix">
 									<div class="left">
 										<img src="img/6.png" alt="" />
 									</div>
 									<div class="right">
-										<div class="descript">
+										<div class="descript leftSlice">
 											<div class="descript-title">
 												<h3>Комплект ретро с ручками «слон» слоновая кость</h3>
 												<i class="icon-08"></i>
@@ -399,14 +398,14 @@
 								</div>
 							</div>
 
-							<div class="article_2_wrapp" id="menu-3">
+							<div class="article_2_wrapp animate" id="menu-3">
 								<h3>Варочные панели</h3>
 								<div class="article_2 clearfix">
 									<div class="left">
 										<img src="img/plita.jpg" alt="" />
 									</div>
 									<div class="right">
-										<div class="descript">
+										<div class="descript leftSlice">
 											<div class="descript-title">
 												<h3>Варочная панель «газ на стекле» на 4 конфорки белая</h3>
 												<i class="icon-09"></i>
@@ -446,14 +445,14 @@
 								</div>
 							</div>						
 
-							<div class="article_2_wrapp" id="menu-4">
+							<div class="article_2_wrapp animate" id="menu-4">
 								<h3>Индукционные панели</h3>
 								<div class="article_2 clearfix">
 									<div class="left">
 										<img src="img/5.png" alt="" />
 									</div>
 									<div class="right">
-										<div class="descript">
+										<div class="descript leftSlice">
 											<div class="descript-title">
 												<h3>Индукционная панель на 4 конфорки стекло</h3>
 												<i class="icon-10"></i>
@@ -493,14 +492,14 @@
 								</div>
 							</div>
 
-							<div class="article_2_wrapp" id="menu-1">
+							<div class="article_2_wrapp animate" id="menu-1">
 								<h3>Наклонные вытяжки</h3>
 								<div class="article_2 clearfix">
 									<div class="left">
 										<img src="img/8.png" alt="" />
 									</div>
 									<div class="right">
-										<div class="descript">
+										<div class="descript leftSlice">
 											<div class="descript-title">
 												<h3>Вытяжка 3-х секционная наклонная топленое молоко</h3>
 												<i class="icon-11"></i>
@@ -587,7 +586,7 @@
 
 				<!-- Section 5 -->
 
-				<section>
+				<section id="about">
 
 					<div class="row">
 
@@ -596,8 +595,8 @@
 							<p class="h-desc">Мы создаем технику европейского уровня по доступной цене</p>
 						</div>
 
-						<div class="article_3 clearfix">
-							<div class="left">
+						<div class="article_3 clearfix animate">
+							<div class="left fadeIn">
 								<img src="img/article_photo.jpg" alt="" />
 							</div>
 							<div class="right">
@@ -645,56 +644,52 @@
 				<section class="shape-sect shape-bg">
 
 					<div class="row">
-
-						<div class="oveflow_wrapp">
-							<div class="thumbnails_2 offset-ziro set_height">
-								<div class="thumb-2 thumb">
-									<a href="#" class="inner">
-										<div class="img-box">
-											<img src="img/thumb_2_01.jpg" alt="" />
-										</div>
-										<div class="descript">
-											<h3>Строгий контроль качества сборки</h3>
-											<p>На каждом этапе сборки техника Svar проходит многоступенчатый контроль качества. Это позволяет добиться 0,5% процента брака, что является одним из наиболее впечатляющих результатов среди европейских производителей</p>
-										</div>
-									</a>
-								</div>
-								<div class="thumb-2 thumb">
-									<a href="#" class="inner">
-										<div class="img-box">
-											<img src="img/thumb_2_02.jpg" alt="" />
-										</div>
-										<div class="descript">
-											<h3>20 лет опыта в производстве бытовой техники</h3>
-											<p>АО «ППО ЭВТ им. В.А. Ревунова» — одно из первых отечественных предприятий, которое освоило полный цикл производства бытовой техники. Наш впечатляющее достижение: торговая марка «Svar»</p>
-										</div>
-									</a>
-								</div>
-								<div class="thumb-2 thumb">
-									<a href="#" class="inner">
-										<div class="img-box">
-											<img src="img/thumb_2_03.jpg" alt="" />
-										</div>
-										<div class="descript">
-											<h3>Собственное конструкторское бюро и разработки</h3>
-											<p>Производитель бытовой техники Svar имеет собственное конструкторское бюро, нацеленное на поиск передовых дизайнерских и инженерных решений. Мы сохраняем наши отечественные инновации</p>
-										</div>
-									</a>
-								</div>
-								<div class="thumb-2 thumb">
-									<a href="#" class="inner">
-										<div class="img-box">
-											<img src="img/thumb_2_04.jpg" alt="" />
-										</div>
-										<div class="descript">
-											<h3>Дух инноваций — в каждой детали</h3>
-											<p>Ассортимент выпускаемой бытовой техники включает в себя последние достижения в науке и технике. Идеально гармонирующие с современными интерьерами кухонные плиты являются образцом сочетания прогрессивных технологий и современного дизайна</p>
-										</div>
-									</a>
-								</div>
+						<div class="thumbnails_2 offset-ziro set_height">
+							<div class="thumb-2 thumb animate">
+								<a href="#" class="inner">
+									<div class="img-box fadeIn">
+										<img src="img/thumb_2_01.jpg" alt="" />
+									</div>
+									<div class="descript">
+										<h3>Строгий контроль качества сборки</h3>
+										<p>На каждом этапе сборки техника Svar проходит многоступенчатый контроль качества. Это позволяет добиться 0,5% процента брака, что является одним из наиболее впечатляющих результатов среди европейских производителей</p>
+									</div>
+								</a>
+							</div>
+							<div class="thumb-2 thumb animate">
+								<a href="#" class="inner">
+									<div class="img-box fadeIn">
+										<img src="img/thumb_2_02.jpg" alt="" />
+									</div>
+									<div class="descript">
+										<h3>20 лет опыта в производстве бытовой техники</h3>
+										<p>АО «ППО ЭВТ им. В.А. Ревунова» — одно из первых отечественных предприятий, которое освоило полный цикл производства бытовой техники. Наш впечатляющее достижение: торговая марка «Svar»</p>
+									</div>
+								</a>
+							</div>
+							<div class="thumb-2 thumb animate">
+								<a href="#" class="inner">
+									<div class="img-box fadeIn">
+										<img src="img/thumb_2_03.jpg" alt="" />
+									</div>
+									<div class="descript">
+										<h3>Собственное конструкторское бюро и разработки</h3>
+										<p>Производитель бытовой техники Svar имеет собственное конструкторское бюро, нацеленное на поиск передовых дизайнерских и инженерных решений. Мы сохраняем наши отечественные инновации</p>
+									</div>
+								</a>
+							</div>
+							<div class="thumb-2 thumb animate">
+								<a href="#" class="inner">
+									<div class="img-box fadeIn">
+										<img src="img/thumb_2_04.jpg" alt="" />
+									</div>
+									<div class="descript">
+										<h3>Дух инноваций — в каждой детали</h3>
+										<p>Ассортимент выпускаемой бытовой техники включает в себя последние достижения в науке и технике. Идеально гармонирующие с современными интерьерами кухонные плиты являются образцом сочетания прогрессивных технологий и современного дизайна</p>
+									</div>
+								</a>
 							</div>
 						</div>
-
 					</div>
 
 				</section>
@@ -783,9 +778,9 @@
 
 						<h2>Ответы на ваши вопросы</h2>
 
-						<div class="two-cols clearfix">
+						<div class="two-cols clearfix animate">
 							<div class="left">
-								<div class="accordeon">
+								<div class="accordeon leftSlice">
 									<div class="accordeon-item">
 										<div class="ac-title">
 											<h3>Когда ожидается выход вашей продукции?</h3>
@@ -821,7 +816,7 @@
 								</div>
 							</div>
 							<div class="right">
-								<div class="form-2">
+								<div class="form-2 fadeIn">
 									<h3>Узнайте первым о выходе техники <b>Svar</b> в продажу и получите <b>10% скидку</b></h3>
 									<p>В день официального выхода продукции «Svar» в продажу мы пришлем вам уведомление и дополнительную скидку 10%</p>
 									<div class="form-inner">
@@ -853,7 +848,7 @@
 
 				<!-- Section 10 -->
 
-				<section class="section-10">
+				<section class="section-10" id="shopping">
 
 					<div class="row">
 
@@ -911,14 +906,12 @@
 
 				<!-- Section 11 -->
 
-				<section class="contacts-sect">
-
-					<div id="map"></div>
+				<section class="contacts-sect animate">
 
 					<div class="row">
 
-						<div class="contacts_wrapp">
-							<div class="contacts_inner">
+						<div class="contacts_wrapp leftSlice">
+							<div class="contacts_inner clearfix">
 								<div class="contacts-descript">
 									<h3>Контактная информация</h3>
 									<div class="contacts-thumbs offset-ziro">
@@ -985,6 +978,8 @@
 						</div>
 
 					</div>
+
+					<div id="map"></div>					
 
 				</section>
 

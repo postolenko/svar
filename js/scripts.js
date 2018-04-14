@@ -26,6 +26,10 @@ var itemNav;
 
 // ---------------
 
+var navCoord;
+
+// ---------------
+
 $(window).load(function() {
 
     getPromoPaddingTop();
@@ -33,6 +37,7 @@ $(window).load(function() {
     getInfoBoxParams();
     getNavItemsSize();
     getFixedNav();
+    getAnimation();
     scrollNav();
 
     $(".accordeon .accordeon-item").each(function() {
@@ -51,7 +56,8 @@ $(window).resize(function() {
 
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
-    getPromoPaddingTop();   
+    getPromoPaddingTop();
+    getAnimation();
     getTHumbsHeight();
     getInfoBoxParams();
     getNavItemsSize();
@@ -63,6 +69,7 @@ $(window).resize(function() {
 $(document).scroll(function() {
 
     getFixedNav();
+    getAnimation();
     scrollNav();
 
 });
@@ -121,7 +128,7 @@ $(document).ready(function() {
 
     });
 
-    $(".main-nav_2 a").click(function(e) {
+    $(".main_nav a").click(function(e) {
 
         e.preventDefault();
 
@@ -129,13 +136,17 @@ $(document).ready(function() {
 
         var visibleBlock = $(hrefAttr);
 
-        parentBlock = $(this).closest(".main-nav_2");
+        parentBlock = $(this).closest(".main_nav");
         parentBlock.find("a").removeClass("active");
         $(this).addClass("active");
 
         $('html, body').stop().animate({
-            'scrollTop': visibleBlock.offset().top-$(".main-nav_2").height()
+            'scrollTop': visibleBlock.offset().top - 50
         }, 500);
+
+        var navigationWrapp = $(this).closest(".naigation");
+        $(".respmenubtn[data-nav-btn = '"+ navigationWrapp.attr("data-nav") +"']").removeClass("active");
+        navigationWrapp.fadeOut(300);
 
     });
 
@@ -278,6 +289,10 @@ function getTHumbsHeight() {
 
         thumb = $(this).find(".thumb");
 
+        thumb.find(".inner").css({
+            "height" : "auto"
+        });
+
         thumb.each(function() {
 
             thumbHeight = $(this).find(".inner").height();
@@ -296,27 +311,31 @@ function getTHumbsHeight() {
 
 function getInfoBoxParams() {
 
-    $(".info_wrapp").each(function() {
+    if( bodyWidth >= 1024 ) {
 
-        infoBlock = $(this).find(".info-2");
+        $(".info_wrapp").each(function() {
 
-        leftCoord = $(this).find(".leftCoord").offset().left;
+            infoBlock = $(this).find(".info-2");
 
-        infoBlock.css({
-            "width" : bodyWidth - leftCoord + "px",
+            leftCoord = $(this).find(".leftCoord").offset().left;
+
+            infoBlock.css({
+                "width" : bodyWidth - leftCoord + "px",
+            });
+
+            infoBlock.find(".inner").css({
+                "width" : $(this).find(".leftCoord").width() + "px"
+            });
+
         });
 
-        infoBlock.find(".inner").css({
-            "width" : $(this).find(".leftCoord").width() + "px"
-        });
-
-    });
+    }
 
 }
 
 function getAnimation() {
 
-  $("section").each(function() {
+  $(".animate").each(function() {
 
     if( $(this).offset().top <= $(document).scrollTop() + $(window).height() ) {
 
@@ -330,7 +349,15 @@ function getAnimation() {
 
 function scrollNav() {
 
-    var navCoord = $(".main-nav_2").offset().top + $(".main-nav_2").height();
+    if(bodyWidth >= 1024) {
+
+        navCoord = $(".main-nav_2").offset().top + $(".main-nav_2").height();
+
+    } else {
+
+        navCoord = $(".main-nav_2").offset().top;
+
+    }
 
     $(".main-nav_2 a").each(function() {
 
@@ -338,7 +365,7 @@ function scrollNav() {
 
         var elemCoord = $(linkHref);
 
-        var topElemCoord = elemCoord.offset().top - $(".main-nav_2").height();
+        var topElemCoord = elemCoord.offset().top;
         var bottomElemCoord = topElemCoord + elemCoord.height();
 
         if( navCoord > topElemCoord && navCoord < bottomElemCoord ) {

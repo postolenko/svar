@@ -3,11 +3,25 @@ if( $("#map").length > 0 ) {
     ymaps.ready(init);
 
     var myMap,
-        myPlacemark;
+        myPlacemark,
+        leftCoord,
+        rigthCoord;
+
+    if(bodyWidth >= 1024) {
+
+        leftCoord = 53.226744;
+        rigthCoord = 44.995161;
+
+    } else {
+
+        leftCoord = 53.226444;
+        rigthCoord = 45.000161;
+        
+    }
 
     function init(){   
         myMap = new ymaps.Map("map", {
-            center: [53.226744, 44.995161],
+            center: [leftCoord, rigthCoord],
             zoom: 16
         });
 
