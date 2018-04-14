@@ -920,6 +920,7 @@ textarea:focus {
 
 .soc-links li a img {
     display: block;
+    max-width: 28px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -2274,6 +2275,7 @@ h2.svar.black {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #7ab800;
+    background-size: 35px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
