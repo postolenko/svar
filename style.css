@@ -2677,7 +2677,6 @@ h2.svar.black {
 }
 
 .two-cols .left {
-    /*width: 52%;*/
     width: calc(100% - 518px);
     padding-right: 2%;
     position: relative;
@@ -2685,7 +2684,6 @@ h2.svar.black {
 }
 
 .two-cols .right {
-    /*width: 48%;*/
     width: 518px;
     padding: 20px 0;
     text-align: center;
