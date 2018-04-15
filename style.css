@@ -785,6 +785,63 @@ textarea:focus {
 
 /*-- /Icons --*/
 
+/*-- Pills --*/
+
+.burgundy-pill {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0;
+    padding: 10px 20px 14px 20px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(178, 0, 59);
+    border: 1px solid transparent;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    text-align: center;
+    font-family: "Lato", "Arial", "Verdana", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: normal;
+    color: #ffffff;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.burgundy-pill:link,
+.burgundy-pill:visited {
+    background-color: rgb(178, 0, 59);
+}
+
+.burgundy-pill:active,
+.burgundy-pill.active {
+     background-color: rgb(215, 0, 71);
+}
+
+.burgundy-pill:hover {
+    background-color: rgb(215, 0, 71);
+}
+
+/*-- /Pills --*/
+
 /*-------------------------------------------*/
 /* ----- HEADER ------ */
 /*-------------------------------------------*/
@@ -1322,6 +1379,7 @@ textarea:focus {
     background-image: url(img/promo_bg.jpg);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .promo:before {
@@ -1355,21 +1413,17 @@ textarea:focus {
     z-index: 2;
 }
 
-.promo-slider {
-    margin-bottom: 20px;
-}
-
 .article_1 .left {
-    width: 61%;
+    width: calc(100% - 460px);
 }
 
 .article_1 .right {
-    width: 39%;
+    width: 460px;
 }
 
 .article_1_desc {
     max-width: 630px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .article_1 h1 {
@@ -1400,59 +1454,6 @@ textarea:focus {
     min-width: 320px;
 }
 
-.burgundy-pill {
-    display: inline-block;
-    vertical-align: top;
-    margin: 20px 0;
-    padding: 10px 20px 14px 20px;
-    cursor: pointer;
-    position: relative;
-    background-color: rgb(178, 0, 59);
-    border: 1px solid transparent;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    text-align: center;
-    font-family: "Lato", "Arial", "Verdana", sans-serif;
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: normal;
-    color: #ffffff;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: .3s;
-    -webkit-transition-timing-function: ease;
-
-    -moz-transition-property: all;
-    -moz-transition-duration: .3s;
-    -moz-transition-timing-function: ease;
-
-    -ms-transition-property: all;
-    -ms-transition-duration: .3s;
-    -ms-transition-timing-function: ease;
-
-    -o-transition-property: all;
-    -o-transition-duration: .3s;
-    -o-transition-timing-function: ease;
-
-    transition-property: all;
-    transition-duration: .3s;
-    transition-timing-function: ease;
-}
-
-.burgundy-pill:link,
-.burgundy-pill:visited {
-    background-color: rgb(178, 0, 59);
-}
-
-.burgundy-pill:active,
-.burgundy-pill.active {
-     background-color: rgb(215, 0, 71);
-}
-
-.burgundy-pill:hover {
-    background-color: rgb(215, 0, 71);
-}
-
 .article_1 .right img {
     display: block;
     width: auto;
@@ -1461,11 +1462,58 @@ textarea:focus {
     margin: 0 auto;
 }
 
-.promo-slider .slick-dots {
-    width: 39%;
+.promo-slider_wrapp {
+    margin: 0 0 24px 0;
+    position: relative;
+}
+
+.promo-slider_wrapp:after {
+    content: "";
+    width: 1060px;
+    height: 1060px;
     position: absolute;
-    bottom: -10px;
-    right: 0;
+    top: -334px;
+    left: -299px;
+    border: 2px solid rgba(213, 215, 216, .05);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.promo-slider .slick-list {
+    z-index: 2;
+}
+
+.promo-slider:before {
+    content: "";
+    width: 650px;
+    height: 650px;
+    background: rgba(213, 215, 216, .05);
+    position: absolute;
+    top: -125px;
+    left: -100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.promo-slider:after {
+    content: "";
+    width: 810px;
+    height: 810px;
+    position: absolute;
+    top: -205px;
+    left: -177px;;
+    border: 2px solid rgba(213, 215, 216, .05);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.promo-slider .slick-dots {
+    margin-top: 45px;
+    position: relative;
+    z-index: 2;
 }
 
 /*-- /Section 1 --*/
@@ -2621,9 +2669,7 @@ h2.svar.black {
 
 .sect-9 {
     padding: 73px 0 49px 0;
-    background-image: url(img/circles.png);
-    background-position: 132% -65px;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .two-cols {
@@ -2631,13 +2677,18 @@ h2.svar.black {
 }
 
 .two-cols .left {
-    width: 52%;
+    /*width: 52%;*/
+    width: calc(100% - 518px);
     padding-right: 2%;
+    position: relative;
+    z-index: 2;
 }
 
 .two-cols .right {
-    width: 48%;
-    padding: 20px 0 20px 2%;
+    /*width: 48%;*/
+    width: 518px;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .accordeon-item {
@@ -2811,15 +2862,48 @@ h2.svar.black {
     color: #282922;
 }
 
+.form-2_wrapp {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.form-2_wrapp:before {
+    content: "";
+    width: 960px;
+    height: 960px;
+    position: absolute;
+    top: -224px;
+    left: -265px;
+    border: 1px solid #ecf1e2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.form-2_wrapp:after {
+    content: "";
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: -104px;
+    left: -136px;
+    border: 1px solid #ecf1e2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
 .form-2 {
-    max-width: 427px;
-    margin: 0 auto;
+    max-width: 430px;
     padding: 38px 3% 40px 3%;
     text-align: center;
     background-color: rgb(97, 99, 101);
     -webkit-border-radius: 11px;
     -moz-border-radius: 11px;
     border-radius: 11px;
+    position: relative;
+    z-index: 2;
 }
 
 .form-2 h3 {

@@ -9,6 +9,7 @@ $(window).on("load",function(){
 $(window).resize(function() {
 
     getScrollBar();
+    getPromoSlider();
 
 });
 
@@ -37,6 +38,33 @@ $(document).ready(function() {
     });
 
 });
+
+function getPromoSlider() {
+
+    if ( bodyWidth >= 900 ) {
+
+        if( !$(".promo-slider").hasClass("slick-initialized") ) {
+
+            $(".promo-slider").slick({
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 1200,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true
+            });
+
+        } 
+
+    } else {
+
+        $(".promo-slider").slick("unslick");
+
+    }
+
+}
 
 function getScrollBar() {
 
